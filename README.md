@@ -1,4 +1,5 @@
 # Benchmarking raster data for geoserver and rasdaman 
+We hereby performed benchmarking tests on geospatial platforms. We generally performed WMS request to geospatial platform Rasdaman and Geoserver and observed which platform is more efficient in performing geospatial operations. To do so, we varied various parameters, send request and saw the outcomes.
 
 ## Prequisites
 You must have geoserver and rasdaman installed in your system.<br />
