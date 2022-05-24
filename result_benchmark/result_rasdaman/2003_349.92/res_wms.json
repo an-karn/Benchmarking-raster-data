@@ -1,0 +1,15 @@
+{
+    "results" : [
+        {
+"command": "GET http://localhost:8080/rasdaman/ows?service=WMS&version=1.3.0&request=GetMap&layers=AverageChloroColor2002_3&bbox=-90,-180,90,180&width=800&height=600&crs=EPSG:4326&format=image/png&
+styles=",
+      "mean": 0.005095985376375375,
+      "stddev": 0.0047353389088851386,
+      "median": 0.0037674050600000003,
+      "user": 0.0005022068273783894,
+      "system": 0.00022326215238915195,
+      "min": 0.0,
+      "max": 0.030501875060000003
+        }
+]
+}

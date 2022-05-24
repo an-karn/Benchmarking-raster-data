@@ -1,0 +1,30 @@
+{
+  "config": {
+    "service_url": "http://localhost:8080/rasdaman/ows",
+    "tmp_directory": "/tmp/",
+    "crs_resolver": "http://ows.rasdaman.org/def/",
+    "default_crs": "http://opengis.net/def/def/crs/OGC/0/Index2D",
+    "mock": false,
+    "automated": true
+  },
+  "input": {
+    "coverage_id": "AverageChloroColor2002_15",
+    "paths": ["COLOR*.TIFF"]
+  },
+  "recipe": {
+    "name": "time_series_irregular",
+    "options": {
+      "time_parameter": {
+        "filename": {
+          "regex": "(.*)_(.*)\\.(.*)",
+          "group": "2"
+        },
+        "datetime_format": "YYYY-MM"
+      },
+      "time_crs": "http://opengis.net/def/crs/OGC/0/AnsiDate",
+      "tiling": "ALIGNED [0:0, 0:3600, 0:1800] TILE SIZE 5000000",
+      "wms_import": true,
+      "scale_levels": [2, 4, 8]
+    }
+  }
+}
